@@ -1,0 +1,83 @@
+Package: SpaCeMInD
+Type: Package
+Title: Spatial Cellular and Molecular Interaction using Deep Learning
+Version: 0.1.0
+Authors@R: 
+  c(person(given = "Shivang",
+           family = "Sharma", 
+           role = c("aut", "cre"), 
+           email = "ssharm55@jhmi.edu", 
+           comment = ), 
+    person(given = "Jordan",
+           family = "Wilson", 
+           role = c("aut"), 
+           email = "jwils178@jhmi.edu"), 
+    person(given = "Hongkai",
+           family = "Ji", 
+           role = c("aut", "ctb"), 
+           email = "hji@jhu.edu"), 
+    person(given = "Eugene",
+           family = "Shenderov", 
+           role = c("aut", "ctb", "cph"), 
+           email = "Eugene.Shenderov@jhmi.edu"))
+Description: User-friendly tools for analysis and visualization of CosMx SMI 
+    data at cellular and subcellular level using conventional scRNA-seq analysis
+    tools, in addition to advanced deep learning algorithms.
+URL: 
+BugReports: 
+Depends: 
+    R (>= 4.3.0)
+Imports: 
+    readxl
+    writexl
+    rstudioapi
+    Matrix
+    tidyverse
+    data.table
+    mltools
+    DropletUtils
+    R.utils
+    rhdf5
+    tools
+    dplyr
+    Seurat
+    scran
+    ggplot2
+    ks
+    knitr
+    ggpubr
+    plotly
+    RColorBrewer
+    SPARK
+    EBImage
+    ComplexHeatmap
+    circlize
+    crayon
+    ggrepel
+    reshape2
+    corrr
+    FactoMineR
+    ggcorrplot
+    factoextra
+    patchwork
+    BiocParallel
+    DESeq2
+    BiocGenerics
+    sp
+    SeuratDisk
+    
+Suggests: 
+VignetteBuilder: knitr
+RoxygenNote: 7.3.1
+Roxygen: list(markdown = TRUE)
+Config/testthat/edition: 
+SystemRequirements: 
+Collate: 
+    CosMx_functions.R
+    QC.R
+    data_transformation_functions.R
+    file_manipulation.R
+    statistical_functions.R
+License: MIT + file LICENSE | GPL (>= 3)
+Encoding: UTF-8
+LazyData: true

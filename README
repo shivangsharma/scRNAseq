@@ -1,0 +1,11 @@
+This package can perform exploratory analysis of CosMx data.
+
+It just requires a Seurat object which should have the following features:
+- Raw counts data in the counts slot in assays slot. The counts data should be a dgCMatrix.
+- - cell IDs should be in the format c_<RUN_NAME>_<SLIDE_NAME>_<PATIENT_ID>_<ORGAN_NAME>_<TISSUE_NAME>_<MORPHOLOGY_NAME>_<FOV>_<CELL_NUMBER>
+- - Tissue name is used to store multiple tissues from same patient and same organ. If either patient or organ name are varying but not both, it follows the one that is varying. If both of them are varying together, it follows patient name. If none of them is varying, it follows its unique ID which represents biological repeats for same patient for same tissue.
+- meta.data should contain all the meta data for cells. All group/discrete/categorical variables should be converted to factors.
+- - columns for fov, cell_id, tissue_id, run_name, slide_name, "Area", "AspectRatio", "Width", "Height", max and mean intensities of each marker, "ISH.concentration", "Dash", "tissue", "log10totalcounts", "IFcolor", "locations"
+- - FOV should be integer value
+- The Seurat object should have the convex hull polygon files
+- If possible, the image files should also be attached
